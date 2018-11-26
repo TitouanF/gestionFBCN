@@ -97,6 +97,10 @@ public class Course
     }
     public String toString()
     {
+        return nom;
+    }
+    public String accueil()
+    {
         String phrase;
         if (getChallenge() == "oui")
         {

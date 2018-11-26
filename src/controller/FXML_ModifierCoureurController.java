@@ -158,20 +158,15 @@ public class FXML_ModifierCoureurController implements Initializable
     public boolean estUnString(String chaine)
         {
             chaine = chaine.replaceAll(" ","");
-            int nombre = chaine.length();
-            int i;
-            for (i=0;i<nombre;i++)
+            if (Pattern.matches("^[a-zA-Zéèàùûêâôë]{1}[a-zA-Zéèàùûêâôë \\'-]*[a-zA-Zéèàùûêâôë]$", chaine))
             {
-                if (Character.isLetter(chaine.charAt(i)))
-                {
-
-                }
-                else
-                {
-                    return true;
-                }
+                return false;
             }
-            return false;
+            else
+            {
+                return true;
+            }
+            
         }
     public boolean estUneAdresseMail(String chaine)
         {

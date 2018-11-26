@@ -148,21 +148,15 @@ public class FXML_InscrireCoureurController implements Initializable
     }    
     public boolean estUnString(String chaine)
     {
-        chaine = chaine.replaceAll(" ","");
-        int nombre = chaine.length();
-        int i;
-        for (i=0;i<nombre;i++)
-        {
-            if (Character.isLetter(chaine.charAt(i)))
+         chaine = chaine.replaceAll(" ","");
+            if (Pattern.matches("^[a-zA-Zéèàùûêâôë]{1}[a-zA-Zéèàùûêâôë \\'-]*[a-zA-Zéèàùûêâôë]$", chaine))
             {
-                
+                return false;
             }
             else
             {
                 return true;
             }
-        }
-        return false;
     }
     public boolean estUneAdresseMail(String chaine)
     {

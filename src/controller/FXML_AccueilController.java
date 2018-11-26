@@ -34,7 +34,7 @@ public class FXML_AccueilController implements Initializable
     public void initialize(URL url, ResourceBundle rb)
     {
         Course course = GestionRequetes.RequeteCoursePlusProche();
-        labelProchaineCourse.setText(course.toString());      
+        labelProchaineCourse.setText(course.accueil());      
     }    
      @FXML
   private void handleInscrireCoureur()
@@ -97,25 +97,6 @@ public class FXML_AccueilController implements Initializable
        try
     {
       FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/vue/FXML_ModifierCoureur.fxml"));  
-      AnchorPane page=(AnchorPane) loader.load();
-      Stage dialogStage = new Stage();
-      Scene scene = new Scene(page);
-      dialogStage.setScene(scene);
-      dialogStage.showAndWait();
-    }
-     catch(IOException ioe)
-    {
-        
-      System.out.println("ERREUR chargement boite dialogue:" + ioe.getMessage());
-   
-    }  
-  }
-   @FXML
-  private void handleInscrireResultat()
-  {
-       try
-    {
-      FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/vue/FXML_InscrireResultat.fxml"));  
       AnchorPane page=(AnchorPane) loader.load();
       Stage dialogStage = new Stage();
       Scene scene = new Scene(page);

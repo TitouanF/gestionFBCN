@@ -3,6 +3,7 @@ import Modele.Club;
 import Modele.GestionRequetes;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -93,20 +94,15 @@ public class FXML_ModifierClubController implements Initializable
             }    
         public boolean estUnString(String chaine)
         {
-            chaine = chaine.replaceAll(" ","");
-            int nombre = chaine.length();
-            int i;
-            for (i=0;i<nombre;i++)
+             chaine = chaine.replaceAll(" ","");
+            if (Pattern.matches("^[a-zA-Zéèàùûêâôë]{1}[a-zA-Zéèàùûêâôë \\'-]*[a-zA-Zéèàùûêâôë]$", chaine))
             {
-                if (Character.isLetter(chaine.charAt(i)))
-                {
-                }
-                else
-                {
-                    return true;
-                }
+                return false;
             }
-            return false;
+            else
+            {
+                return true;
+            }
         }
 
     }

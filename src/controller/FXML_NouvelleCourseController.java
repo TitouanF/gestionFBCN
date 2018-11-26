@@ -11,6 +11,7 @@ import Modele.Heure;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventType;
@@ -133,20 +134,14 @@ public class FXML_NouvelleCourseController implements Initializable
     public boolean estUnString(String chaine)
     {
         
-        chaine = chaine.replaceAll(" ","");
-        int nombre = chaine.length();
-        int i;
-        for (i=0;i<nombre;i++)
-        {
-            if (Character.isLetter(chaine.charAt(i)))
+         chaine = chaine.replaceAll(" ","");
+            if (Pattern.matches("^[a-zA-Zéèàùûêâôë]{1}[a-zA-Zéèàùûêâôë \\'-]*[a-zA-Zéèàùûêâôë]$", chaine))
             {
-                
+                return false;
             }
             else
             {
                 return true;
             }
-        }
-        return false;
     }
 }
