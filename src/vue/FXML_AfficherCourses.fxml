@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXML_AfficherCoursesController">
+   <children>
+      <TableView fx:id="tableCourse" layoutX="37.0" layoutY="100.0" prefHeight="200.0" prefWidth="843.0">
+        <columns>
+          <TableColumn fx:id="colNom" prefWidth="171.0" text="Nom" />
+          <TableColumn fx:id="colLieu" prefWidth="156.0" text="Lieu" />
+            <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="115.0" text="Date" />
+            <TableColumn fx:id="colHeureD" prefWidth="120.0" text="heure Depart" />
+            <TableColumn fx:id="colDistance" prefWidth="110.0" text="Distance" />
+            <TableColumn fx:id="colPrix" minWidth="7.0" prefWidth="77.0" text="Prix" />
+            <TableColumn fx:id="colChallenge" minWidth="0.0" prefWidth="93.0" text="Challenge" />
+        </columns>
+      </TableView>
+      <Label layoutX="177.0" layoutY="45.0" text="Affichage de toutes les courses" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAjoutCourse" layoutX="112.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleAjoutCourse" text="Ajouter d'une course" />
+      <Button fx:id="boutonRefresh" layoutX="424.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleRefresh" text="Refresh" />
+   </children>
+</AnchorPane>

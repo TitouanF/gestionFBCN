@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXML_AfficherLesClubsController">
+   <children>
+      <TableView fx:id="TableClub" layoutX="40.0" layoutY="125.0" prefHeight="200.0" prefWidth="930.0">
+        <columns>
+          <TableColumn fx:id="colNom" prefWidth="196.0" text="nom" />
+            <TableColumn fx:id="colAdresse" prefWidth="180.0" text="adresse" />
+            <TableColumn fx:id="colCP" prefWidth="95.0" text="code postal" />
+            <TableColumn fx:id="colVille" prefWidth="138.0" text="Ville" />
+            <TableColumn fx:id="colPresident" prefWidth="165.0" text="président du club" />
+            <TableColumn fx:id="colCoureurs" prefWidth="152.0" text="nombre de coureurs" />
+        </columns>
+      </TableView>
+      <Label layoutX="383.0" layoutY="34.0" text="Liste des clubs" textFill="RED">
+         <font>
+            <Font size="39.0" />
+         </font></Label>
+      <Button fx:id="bouttonAjouterClub" layoutX="150.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleAjoutClub" text="Ajouter un club" />
+      <Button fx:id="BouttonModifierClub" layoutX="747.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleModifierClub" text="Modifier un club" />
+      <Button fx:id="boutonRefresh" layoutX="472.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleRefresh" text="Refresh" />
+   </children>
+</AnchorPane>
