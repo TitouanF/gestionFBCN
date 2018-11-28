@@ -31,8 +31,8 @@
             <Button fx:id="boutonAfficherClub" mnemonicParsing="false" onAction="#handleAfficherClub" prefHeight="31.0" prefWidth="240.0" text="Afficher les clubs" GridPane.rowIndex="1" />
             <Button fx:id="boutonAjouterNouveauxCoureurs" mnemonicParsing="false" onAction="#handleInscrireCoureur" prefHeight="31.0" prefWidth="240.0" text="Ajouter de nouveaux coureurs" GridPane.columnIndex="1" />
             <Button fx:id="boutonMettreAJourCoureurs" mnemonicParsing="false" onAction="#handleModifierCoureur" prefHeight="31.0" prefWidth="240.0" text="Mettre à jour les coureurs" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="boutonAfficherClassement" mnemonicParsing="false" prefHeight="31.0" prefWidth="240.0" text="Afficher le classement challenge" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="240.0" text="Afficher le classement par course" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#handleAfficherClassement" prefHeight="31.0" prefWidth="240.0" text="Afficher le classement" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" text="fichier csv" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>

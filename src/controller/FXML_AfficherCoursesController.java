@@ -53,7 +53,7 @@ public class FXML_AfficherCoursesController implements Initializable
     }  
       public void vraiInitialize()
   {
-       colNom.setCellValueFactory(new PropertyValueFactory<Course,String>("nom"));
+        colNom.setCellValueFactory(new PropertyValueFactory<Course,String>("nom"));
         colLieu.setCellValueFactory(new PropertyValueFactory<Course,String>("lieu"));
         colDate.setCellValueFactory(new PropertyValueFactory<Course,String>("date"));
         colHeureD.setCellValueFactory(new PropertyValueFactory<Course,String>("heureDepart"));

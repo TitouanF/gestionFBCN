@@ -110,4 +110,24 @@ public class FXML_AccueilController implements Initializable
    
     }  
   }
+  
+   @FXML
+  private void handleAfficherClassement()
+  {
+       try
+        {
+          FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/vue/FXML_AfficherClassement.fxml"));  
+          AnchorPane page=(AnchorPane) loader.load();
+          Stage dialogStage = new Stage();
+          Scene scene = new Scene(page);
+          dialogStage.setScene(scene);
+          dialogStage.showAndWait();
+        }
+         catch(IOException ioe)
+        {
+
+          System.out.println("ERREUR chargement boite dialogue:" + ioe.getMessage());
+
+        }  
+  }
 }
