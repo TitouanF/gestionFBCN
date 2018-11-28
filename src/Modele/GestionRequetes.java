@@ -24,6 +24,7 @@ public class GestionRequetes
     static ObservableList<ClubEtCoureurs> lesClubsEtCoureurs = FXCollections.observableArrayList();
     static ObservableList<Coureurs> lesCoureurs = FXCollections.observableArrayList();
     static ObservableList<Club> lesClubs = FXCollections.observableArrayList();
+    static ObservableList<ClassementCourseCoureurs> lesCoursesCoureurs = FXCollections.observableArrayList();
         public static ObservableList<Club> listeClubs()
             {
                 Statement stmt;
@@ -51,10 +52,8 @@ public class GestionRequetes
                           System.out.println("Erreur Requete de chargement : " + e.getMessage());
                     }
                 return lesClubs;
-            }
-        
-        
-         public static ObservableList<Course> listeCourse()
+            } 
+        public static ObservableList<Course> listeCourse()
             {
                 Statement stmt;
                 ResultSet rs;
@@ -83,9 +82,7 @@ public class GestionRequetes
                     }
                 return lesCourses;
             }
-         
-         
-         static public Course RequeteCoursePlusProche()
+        static public Course RequeteCoursePlusProche()
             {
                 Course course = null;
                 String requete = "select * from course where date = (select min(date) from course where date > now()) group by nom";
@@ -108,10 +105,8 @@ public class GestionRequetes
                               System.out.println("Erreur Requete de chargement : " + e.getMessage());
                         }
                 return course;
-            }
-         
-         
-          public static void insertCourreur(String clubChoisis,String sexeChoisis,String nomChoisis,String prenomChoisis,String anneeChoisis,String adresseChoisis,String CPChoisis,String villeChoisis,String adresseMailChoisis,String pointsPrecedentChoisis,String pointsActuelleChoisis,String noTelChoisis)
+            }       
+        public static void insertCourreur(String clubChoisis,String sexeChoisis,String nomChoisis,String prenomChoisis,String anneeChoisis,String adresseChoisis,String CPChoisis,String villeChoisis,String adresseMailChoisis,String pointsPrecedentChoisis,String pointsActuelleChoisis,String noTelChoisis)
              {
                 String insertion = "insert into coureur value('"+clubChoisis+"','"+nomChoisis+"','"+prenomChoisis+"','"+sexeChoisis+"',"+anneeChoisis+",'"+adresseChoisis+"','"+CPChoisis+"','"+villeChoisis+"','"+noTelChoisis+"','"+adresseMailChoisis+"',"+pointsPrecedentChoisis+","+pointsActuelleChoisis+")";
                 Statement stmt;
@@ -130,7 +125,7 @@ public class GestionRequetes
                         System.out.println("Erreur Requete de chargement : " + e.getMessage());
                   }
              }
-          static public ObservableList<ClubEtCoureurs> requeteClubEtCoureurs()
+        static public ObservableList<ClubEtCoureurs> requeteClubEtCoureurs()
             {     
                
                ClubEtCoureurs club;
@@ -158,7 +153,7 @@ public class GestionRequetes
                     }
                return lesClubsEtCoureurs;
             }
-          static public ObservableList<Coureurs>ListeCoureurs()
+        static public ObservableList<Coureurs>ListeCoureurs()
           {
               Coureurs coureur;
                Statement stmt;
@@ -185,9 +180,8 @@ public class GestionRequetes
                     }
               
               return lesCoureurs;
-          }
-        
-          static public void insertionDansBDD(String nouvNom,String nouvLieu,LocalDate nouvDate,String nouvHeureDepart,String nouvDistance,String nouvPrix,int nouvChallenge)
+          }       
+        static public void insertionDansBDD(String nouvNom,String nouvLieu,LocalDate nouvDate,String nouvHeureDepart,String nouvDistance,String nouvPrix,int nouvChallenge)
             {
                 Statement stmt;
                     ResultSet rs;
@@ -208,7 +202,7 @@ public class GestionRequetes
                     }
                     System.out.println("Ajout effectué");
             }
-          static public void insertionNouvClub(String nom,String adresse,String CP,String ville, String nomPresident)
+        static public void insertionNouvClub(String nom,String adresse,String CP,String ville, String nomPresident)
           {
               Statement stmt;
                     ResultSet rs;
@@ -230,7 +224,7 @@ public class GestionRequetes
                     }
                    
           }
-          static public void modificationClub(String nom,String adresse,String cp,String ville,String nomPresident)
+        static public void modificationClub(String nom,String adresse,String cp,String ville,String nomPresident)
           {
             String requete = "update club set adresse = '" + adresse+"' ,cp = '"+cp+"' ,ville = '" + ville + "', nomPresident = '"+nomPresident+"' where nom ='"+ nom+"'";
             Statement stmt;
@@ -251,7 +245,7 @@ public class GestionRequetes
                     System.out.println("Erreur Requete de chargement : " + e.getMessage());
               }
           }
-          static public void modificationCoureur(String nouvNomClub,String nouvNom,String nouvPrenom,String nouvAdresse,String nouvCP,String nouvTel,String nouvVille,String nouvEmail,String nom)
+        static public void modificationCoureur(String nouvNomClub,String nouvNom,String nouvPrenom,String nouvAdresse,String nouvCP,String nouvTel,String nouvVille,String nouvEmail,String nom)
           {
             String requete = "update coureur set nomClub ='"+nouvNomClub+"' , nom = '"+nouvNom+"',prenom = '"+nouvPrenom+"',adresse = '"+nouvAdresse+"',cp = '"+nouvCP+"',ville = '"+nouvVille+"',tel = '"+nouvTel+"',email = '"+nouvEmail+"'where nom = '"+nom+"'";
             Statement stmt;
@@ -271,6 +265,34 @@ public class GestionRequetes
               {
                     System.out.println("Erreur Requete de chargement : " + e.getMessage());
               }
+          }
+        static public ObservableList<ClassementCourseCoureurs> RecuperationCoureur(String nomCourse)
+          {
+            String requete = "SELECT * FROM `courir` WHERE nomCourse = '"+nomCourse+"' order by place asc";
+            Statement stmt;
+            ResultSet rs; 
+            ClassementCourseCoureurs unCoureur;
+            String pilote = "org.gjt.mm.mysql.Driver";
+            String urle = new String("jdbc:mysql://localhost/projetjava");
+            try
+                {
+                    Class.forName(pilote);
+                    Connection conn = DriverManager.getConnection(urle,"root","");
+                    stmt = conn.createStatement();
+                    rs = stmt.executeQuery(requete);
+                
+                    while(rs.next())
+                    {
+                        unCoureur = new ClassementCourseCoureurs(rs.getString("nomCoureur"),rs.getString("prenomCoureur"),rs.getInt("place"),rs.getTime("temps"));
+                        lesCoursesCoureurs.add(unCoureur);
+                    }
+                        stmt.close();
+                }
+            catch (Exception e)
+              {
+                    System.out.println("Erreur Requete de chargement : " + e.getMessage());
+              }
+            return lesCoursesCoureurs;
           }
           
         
