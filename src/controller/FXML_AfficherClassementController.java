@@ -5,6 +5,7 @@ import Modele.Coureurs;
 import Modele.Course;
 import Modele.GestionRequetes;
 import java.net.URL;
+import java.util.Comparator;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -31,8 +32,6 @@ public class FXML_AfficherClassementController implements Initializable
     @FXML
     ComboBox<Course> comboBoxChoixCourse;
     @FXML
-    TableColumn<ClassementCourseCoureurs,String> colCourseClub;
-    @FXML
     TableColumn<ClassementCourseCoureurs,String> colCourseNom;
     @FXML
     TableColumn<ClassementCourseCoureurs,String> colCoursePrenom;
@@ -40,8 +39,6 @@ public class FXML_AfficherClassementController implements Initializable
     TableColumn<ClassementCourseCoureurs,String> colCoursePlace;
     @FXML
     TableColumn<ClassementCourseCoureurs,String> colCourseTemps;
-    @FXML
-    TableColumn<ClassementChallengeCoureurs,String> colChallengeClub;
     @FXML
     TableColumn<ClassementChallengeCoureurs,String> colChallengeNomCoureur;
     @FXML
@@ -52,6 +49,7 @@ public class FXML_AfficherClassementController implements Initializable
     RadioButton radioCourse;
     @FXML
     RadioButton radioChallenge;
+    static ObservableList<ClassementChallengeCoureurs> leClassementCoureurs = FXCollections.observableArrayList();
             
     @Override
     public void initialize(URL url, ResourceBundle rb)
@@ -59,12 +57,10 @@ public class FXML_AfficherClassementController implements Initializable
         tableCourse.setVisible(false);
         tableChallenge.setVisible(false);
         comboBoxChoixCourse.setVisible(false);
-        colCourseClub.setCellValueFactory(new PropertyValueFactory<ClassementCourseCoureurs,String>("nomClub"));
         colCourseNom.setCellValueFactory(new PropertyValueFactory<ClassementCourseCoureurs,String>("nom"));
         colCoursePrenom.setCellValueFactory(new PropertyValueFactory<ClassementCourseCoureurs,String>("prenom"));
         colCoursePlace.setCellValueFactory(new PropertyValueFactory<ClassementCourseCoureurs,String>("place"));
         colCourseTemps.setCellValueFactory(new PropertyValueFactory<ClassementCourseCoureurs,String>("temps"));
-        colChallengeClub.setCellValueFactory(new PropertyValueFactory<ClassementChallengeCoureurs,String>("nomClub"));
         colChallengeNomCoureur.setCellValueFactory(new PropertyValueFactory<ClassementChallengeCoureurs,String>("nom"));
         colChallengePrenomCoureur.setCellValueFactory(new PropertyValueFactory<ClassementChallengeCoureurs,String>("prenom"));
         colChallengePoints.setCellValueFactory(new PropertyValueFactory<ClassementChallengeCoureurs,String>("point"));        
@@ -83,7 +79,9 @@ public class FXML_AfficherClassementController implements Initializable
                     @Override 
                     public void changed(ObservableValue <? extends Course> observable,Course oldValue,Course newValue) 
                     {
-
+                        String nomCourse = ((Course)(comboBoxChoixCourse.getValue())).getNom();
+                        lesCoureursCourse = GestionRequetes.RecuperationCoureur(nomCourse);
+                        tableCourse.setItems(lesCoureursCourse);
                     }    
                 });
         }
@@ -94,5 +92,10 @@ public class FXML_AfficherClassementController implements Initializable
             tableCourse.setVisible(false);
             tableChallenge.setVisible(true);
             comboBoxChoixCourse.setVisible(false);
+            leClassementCoureurs = GestionRequetes.RecuperationClassementCoureurs();
+            Comparator<ClassementChallengeCoureurs> comparator; 
+            comparator = Comparator.comparingInt(ClassementChallengeCoureurs::getPoint);
+            FXCollections.sort(leClassementCoureurs, comparator); 
+            tableChallenge.setItems(leClassementCoureurs);
         }   
 }
