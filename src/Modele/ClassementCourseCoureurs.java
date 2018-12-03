@@ -5,7 +5,6 @@ import java.sql.Time;
 public class ClassementCourseCoureurs 
 {
    
-     private String nomClub;
     private String nom;
     private String prenom;
     private int place;
@@ -13,18 +12,12 @@ public class ClassementCourseCoureurs
 
 
     
-    public ClassementCourseCoureurs(String nouvNomClub,String nouvNom,String nouvPrenom,int nouvPlace,Time nouvTemps)
+    public ClassementCourseCoureurs(String nouvNom,String nouvPrenom,int nouvPlace,Time nouvTemps)
     {
-        nomClub = nouvNomClub;
         nom = nouvNom;
         prenom = nouvPrenom;
         place = nouvPlace;
         temps = nouvTemps;
-
-    }
-    public String getNomClub()
-    {
-        return nomClub;
     }
     public String getNom()
     {

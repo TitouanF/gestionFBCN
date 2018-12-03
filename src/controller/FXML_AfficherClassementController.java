@@ -50,10 +50,23 @@ public class FXML_AfficherClassementController implements Initializable
     @FXML
     RadioButton radioChallenge;
     static ObservableList<ClassementChallengeCoureurs> leClassementCoureurs = FXCollections.observableArrayList();
+    ChangeListener<Course> changeListener1 = new ChangeListener<Course>() 
+                {
+                    @Override 
+                    public void changed(ObservableValue <? extends Course> observable,Course oldValue,Course newValue) 
+                    {
+                                tableCourse.getItems().clear();
+                                String nomCourse = ((Course)(comboBoxChoixCourse.getValue())).getNom();
+                                lesCoureursCourse = GestionRequetes.RecuperationCoureur(nomCourse);
+                                tableCourse.setItems(lesCoureursCourse);                     
+                    }    
+                };
             
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
+        tableChallenge.getItems().clear();
+        tableCourse.getItems().clear();
         tableCourse.setVisible(false);
         tableChallenge.setVisible(false);
         comboBoxChoixCourse.setVisible(false);
@@ -67,27 +80,22 @@ public class FXML_AfficherClassementController implements Initializable
     } 
     @FXML
     public void handleCourse()
-        {      
+        {   
+            
             radioChallenge.setSelected(false);
             tableChallenge.setVisible(false);
             comboBoxChoixCourse.setVisible(true);
             tableCourse.setVisible(true);
             lesCourses = GestionRequetes.listeCourse();
             comboBoxChoixCourse.setItems(lesCourses);
-            comboBoxChoixCourse.valueProperty().addListener(new ChangeListener<Course>() 
-                {
-                    @Override 
-                    public void changed(ObservableValue <? extends Course> observable,Course oldValue,Course newValue) 
-                    {
-                        String nomCourse = ((Course)(comboBoxChoixCourse.getValue())).getNom();
-                        lesCoureursCourse = GestionRequetes.RecuperationCoureur(nomCourse);
-                        tableCourse.setItems(lesCoureursCourse);
-                    }    
-                });
+            comboBoxChoixCourse.valueProperty().addListener(changeListener1);
         }
     @FXML
     public void handleChallenge()
         {
+            comboBoxChoixCourse.valueProperty().removeListener(changeListener1);
+            tableCourse.getItems().clear();
+            tableChallenge.getItems().clear();
             radioCourse.setSelected(false);
             tableCourse.setVisible(false);
             tableChallenge.setVisible(true);

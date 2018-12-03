@@ -1,0 +1,127 @@
+place : 1 | nom : CARLOS | prenom : DIAS | temps : 02:59:58
+place : 2 | nom : CLAUDE | prenom : ROGON | temps : 03:00:21
+place : 3 | nom : BENOÎT | prenom : CALVEZ | temps : 03:01:27
+place : 4 | nom : DIDIER | prenom : KERLOUET | temps : 03:01:43
+place : 5 | nom : JEAN MARC | prenom : CONNAN | temps : 03:05:02
+place : 6 | nom : FRANÇOIS | prenom : HERISSON | temps : 03:06:17
+place : 7 | nom : JULIEN | prenom : LE COQ | temps : 03:07:39
+place : 8 | nom : JEAN CLAUDE | prenom : IZACARD | temps : 03:13:51
+place : 10 | nom : PIERRE | prenom : ALLAIRE | temps : 03:18:44
+place : 11 | nom : ERIC | prenom : HENRY | temps : 03:20:05
+place : 12 | nom : BERNARD | prenom : LE GUEN | temps : 03:23:11
+place : 13 | nom : CHRISTOPHE | prenom : ROUZES | temps : 03:24:12
+place : 15 | nom : Belinski | prenom : Nikolai | temps : 01:30:30
+place : 15 | nom : JEAN JACQUES | prenom : QUERE | temps : 03:25:26
+place : 17 | nom : QUENTIN | prenom : LE PERSONIC | temps : 03:30:38
+place : 18 | nom : BRUNO | prenom : MAROS | temps : 03:35:36
+place : 19 | nom : BERNARD | prenom : OLLIVO | temps : 03:37:48
+place : 20 | nom : DANIEL | prenom : HERRY | temps : 03:37:50
+place : 21 | nom : OLIVIER | prenom : BALEINE | temps : 03:37:52
+place : 22 | nom : DANIEL | prenom : THEPAULT | temps : 03:38:28
+place : 23 | nom : CEDRIC | prenom : MENGUY | temps : 03:39:27
+place : 25 | nom : JEAN LUC | prenom : LE GALL | temps : 03:41:24
+place : 26 | nom : JEAN MARC | prenom : LE GRUIEC | temps : 03:41:44
+place : 28 | nom : PHILIPPE | prenom : ROUX | temps : 03:42:30
+place : 29 | nom : OLIVIER | prenom : VERNAY | temps : 03:43:13
+place : 30 | nom : PHILIPPE | prenom : GUENOT | temps : 03:45:01
+place : 31 | nom : JEAN MICHEL | prenom : LUCAS | temps : 03:45:05
+place : 32 | nom : FRANCK | prenom : MOREL | temps : 03:45:13
+place : 33 | nom : DIDIER | prenom : AUFFRAY | temps : 03:46:47
+place : 34 | nom : JOSIANE | prenom : HAMON | temps : 03:47:08
+place : 35 | nom : BRUNO | prenom : QUEMENER | temps : 03:47:58
+place : 36 | nom : GWENAËL | prenom : QUEANT | temps : 03:48:25
+place : 38 | nom : BRUNO | prenom : ETIEMBLE | temps : 03:50:29
+place : 39 | nom : BENOIT | prenom : LE MASSON | temps : 03:51:07
+place : 40 | nom : ANTHONY | prenom : HERVE | temps : 03:51:40
+place : 41 | nom : DENIS | prenom : LE BOUILL | temps : 03:51:52
+place : 43 | nom : BENOÎT | prenom : BOUCHER | temps : 03:54:26
+place : 44 | nom : DIDIER | prenom : LE GAD | temps : 03:54:27
+place : 45 | nom : BRUNO | prenom : KERRAIN | temps : 03:55:10
+place : 46 | nom : BENOIT | prenom : LORIOT | temps : 03:55:50
+place : 47 | nom : CHRISTIAN | prenom : GELIN | temps : 03:56:56
+place : 48 | nom : KEVIN | prenom : ROYER | temps : 03:57:58
+place : 49 | nom : EMILE | prenom : COLLONGUES | temps : 03:58:28
+place : 50 | nom : CHRISTIAN | prenom : GORREC | temps : 03:59:56
+place : 51 | nom : DOMINIQUE | prenom : MAROS | temps : 04:00:28
+place : 52 | nom : DOMINIQUE | prenom : MAHE | temps : 04:00:48
+place : 53 | nom : ERIC | prenom : CORRE | temps : 04:00:59
+place : 54 | nom : JOSE | prenom : MIGUEL | temps : 04:02:46
+place : 59 | nom : CHRISTOPHE | prenom : BADIER | temps : 04:07:58
+place : 60 | nom : RACHEL | prenom : LE BOUCHER | temps : 04:09:27
+place : 62 | nom : DIDIER | prenom : MARQUER | temps : 04:09:37
+place : 64 | nom : DAMIEN | prenom : RINFRAY | temps : 04:11:32
+place : 66 | nom : CHRISTÈLE | prenom : VETIL | temps : 04:13:37
+place : 67 | nom : JULIA | prenom : MENARD | temps : 01:11:40
+place : 67 | nom : GUILLAUME | prenom : URIEN | temps : 04:14:00
+place : 68 | nom : PATRICK | prenom : DORSO | temps : 04:14:15
+place : 69 | nom : BRUNO | prenom : LE SAINT | temps : 04:14:15
+place : 70 | nom : LIONEL | prenom : ANGOUGEARD | temps : 04:14:30
+place : 71 | nom : BRUNO | prenom : KISLY | temps : 04:14:43
+place : 72 | nom : EMMANUEL | prenom : CLAITE | temps : 04:15:00
+place : 73 | nom : H LUDOVIC | prenom : CREAC | temps : 04:15:40
+place : 74 | nom : OLIVIER | prenom : LE FUR | temps : 04:15:50
+place : 75 | nom : DOMINIQUE | prenom : LOSTANCON | temps : 04:15:59
+place : 76 | nom : GILDAS | prenom : LE BOUDER | temps : 04:16:27
+place : 77 | nom : GILLES | prenom : BESSEMOULIN | temps : 04:16:42
+place : 78 | nom : ALAIN | prenom : COTTIN | temps : 04:17:29
+place : 79 | nom : JACQUES | prenom : ECHASSERIAU | temps : 04:18:10
+place : 80 | nom : SEBASTIEN | prenom : DRU | temps : 04:18:40
+place : 81 | nom : RÉMY | prenom : BOULCH | temps : 04:18:48
+place : 82 | nom : NADIA | prenom : CONNAN | temps : 04:18:48
+place : 83 | nom : ILÉNA | prenom : DIAS | temps : 04:18:53
+place : 84 | nom : JEFF | prenom : COSSIN | temps : 04:19:08
+place : 85 | nom : HERVE | prenom : BOSCHER | temps : 04:19:09
+place : 86 | nom : GAËTAN | prenom : AUFFRET | temps : 04:19:28
+place : 87 | nom : CHRISTIAN | prenom : GUIMARD | temps : 04:19:37
+place : 89 | nom : DAVID | prenom : GUYOMARD | temps : 04:20:34
+place : 90 | nom : JEAN RENÉ | prenom : DAVID | temps : 04:21:34
+place : 91 | nom : CHRISTIAN | prenom : LE BOULAIRE | temps : 04:22:07
+place : 92 | nom : NATHALIE | prenom : LE BOULAIRE | temps : 04:22:07
+place : 93 | nom : KRIS | prenom : BRAU | temps : 04:22:08
+place : 94 | nom : RONAN | prenom : LAMOULER | temps : 04:23:24
+place : 95 | nom : LAURENCE | prenom : LE GUILLOUZIC | temps : 04:23:37
+place : 96 | nom : FRÉDÉRIC | prenom : BEAL | temps : 04:23:37
+place : 97 | nom : GILLES | prenom : TREDAN | temps : 04:23:37
+place : 99 | nom : AGNÈS | prenom : MARCHAND ALLERON | temps : 04:25:39
+place : 100 | nom : DOMINIQUE | prenom : CHAUMETTE | temps : 04:26:02
+place : 101 | nom : PHILIPPE | prenom : GELGON | temps : 04:28:29
+place : 102 | nom : PIERRE | prenom : COURTOIS | temps : 04:28:36
+place : 105 | nom : LAURENCE | prenom : CATROS | temps : 04:30:26
+place : 106 | nom : PHILIPPE | prenom : HERVE | temps : 04:30:26
+place : 107 | nom : CHRISTOPHE | prenom : LOPEZ | temps : 04:31:44
+place : 109 | nom : JEAN YVES | prenom : BOHIC | temps : 04:32:31
+place : 110 | nom : PHILIPPE | prenom : LE MOULLEC | temps : 04:33:38
+place : 111 | nom : JEAN LUC | prenom : HERRY | temps : 04:34:29
+place : 112 | nom : ALAIN | prenom : MICHAUD | temps : 04:34:32
+place : 113 | nom : JEAN CLAUDE | prenom : LE BORGNE | temps : 04:34:49
+place : 114 | nom : EMMANUEL | prenom : MOUE | temps : 04:35:01
+place : 115 | nom : PATRICE | prenom : STRUILLOU | temps : 04:35:01
+place : 116 | nom : GUY | prenom : VASSOR | temps : 04:35:20
+place : 117 | nom : ERWAN | prenom : POULOUIN | temps : 04:36:13
+place : 118 | nom : LAURENT | prenom : LE GONIDEC | temps : 04:39:13
+place : 120 | nom : MARYLINE | prenom : BULABOIS | temps : 04:39:26
+place : 121 | nom : CHRISTIANE | prenom : TESSIER | temps : 04:39:50
+place : 122 | nom : CATHERINE | prenom : JOUAN | temps : 04:40:00
+place : 123 | nom : LOUIS | prenom : LE COZ | temps : 04:44:26
+place : 125 | nom : LAURENCE | prenom : BOUTEILLE | temps : 04:45:57
+place : 126 | nom : DIDIER | prenom : LEVAVASSEUR | temps : 04:47:14
+place : 127 | nom : FRANCOISE | prenom : MIGUEL | temps : 04:47:15
+place : 129 | nom : GILLES | prenom : MONTREER | temps : 04:47:38
+place : 130 | nom : ODILE | prenom : QUINIO | temps : 04:47:38
+place : 132 | nom : CHRISTIAN | prenom : FALHER | temps : 04:50:22
+place : 133 | nom : JACQUELINE | prenom : BUREL | temps : 04:52:49
+place : 134 | nom : JOËL | prenom : RAULT | temps : 04:59:33
+place : 135 | nom : DENISE | prenom : PENNEC | temps : 04:59:34
+place : 136 | nom : ANDRÉ | prenom : GUYOMARD | temps : 05:01:21
+place : 138 | nom : PHILIPPE | prenom : LE GAL | temps : 05:02:56
+place : 139 | nom : ANNE | prenom : MASSAU | temps : 05:05:06
+place : 140 | nom : JEAN PAUL | prenom : MASSAU | temps : 05:05:06
+place : 141 | nom : JOSEE | prenom : DAVID | temps : 05:10:50
+place : 142 | nom : MARIE NOËLLE | prenom : MAZEAU | temps : 05:14:30
+place : 144 | nom : PIERRE | prenom : LE JEANNE | temps : 05:24:40
+place : 145 | nom : MAÏTÉ | prenom : BIGNON | temps : 05:24:50
+place : 146 | nom : DOROTHÉE | prenom : BEAULIEU | temps : 05:24:51
+place : 147 | nom : HERVÉ | prenom : LAVENANT | temps : 05:25:10
+place : 148 | nom : CHANTAL | prenom : LE GUEN | temps : 05:27:40
+place : 155 | nom : GILLES | prenom : SALAUN | temps : 01:18:20
+place : 216 | nom : LOUIS | prenom : GOASDOUE | temps : 01:23:03

@@ -5,11 +5,15 @@
  */
 package Modele;
 
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.PrintStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.time.LocalDate;
+import java.util.Comparator;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -25,6 +29,7 @@ public class GestionRequetes
     static ObservableList<Coureurs> lesCoureurs = FXCollections.observableArrayList();
     static ObservableList<Club> lesClubs = FXCollections.observableArrayList();
     static ObservableList<ClassementCourseCoureurs> lesCoursesCoureurs = FXCollections.observableArrayList();
+    static ObservableList<ClassementChallengeCoureurs> leClassementCoureurs = FXCollections.observableArrayList();
         public static ObservableList<Club> listeClubs()
             {
                 Statement stmt;
@@ -294,6 +299,115 @@ public class GestionRequetes
               }
             return lesCoursesCoureurs;
           }
-          
-        
+         
+        static public ObservableList<ClassementChallengeCoureurs> RecuperationClassementCoureurs()
+        {
+            String nom;
+            String prenom;
+            Statement stmt;
+            ResultSet rs; 
+            int nombrePoints = 0;
+            ClassementChallengeCoureurs unCoureur;
+            String requete = "select nomCourse, nomCoureur,prenomCoureur,sum(challenge) from courir,course where nomCourse = nom and challenge = 1 group by nomCoureur,prenomCoureur having sum(challenge) >= 5";
+            String pilote = "org.gjt.mm.mysql.Driver";
+            String urle = new String("jdbc:mysql://localhost/projetjava");
+            try
+                {
+                    Class.forName(pilote);
+                    Connection conn = DriverManager.getConnection(urle,"root","");
+                    stmt = conn.createStatement();
+                    rs = stmt.executeQuery(requete);
+                    while(rs.next())
+                        {
+                            nom = rs.getString("nomCoureur");
+                            prenom = rs.getString("prenomCoureur");
+                            Statement stmt2;
+                            ResultSet rs2;  
+                            String requete2 = "select nomCourse,nomCoureur,prenomCoureur,place from courir,course where nomCoureur = '"+ nom +"' and prenomCoureur = '"+prenom+"' and nomCourse = course.nom and challenge = 1 group by nomCourse order by place asc limit 5";
+                            String pilote2 = "org.gjt.mm.mysql.Driver";
+                            String urle2 = new String("jdbc:mysql://localhost/projetjava");
+                            try
+                                {
+                                
+                                   Class.forName(pilote);
+                                   Connection conn2 = DriverManager.getConnection(urle,"root","");
+                                   stmt2 = conn2.createStatement();
+                                   rs2 = stmt2.executeQuery(requete2);
+                                   while (rs2.next())
+                                   {
+                                      nombrePoints = nombrePoints + rs2.getInt("place");
+                                   }
+                                   unCoureur = new ClassementChallengeCoureurs(nom,prenom,nombrePoints);
+                                   nombrePoints = 0;
+                                   leClassementCoureurs.add(unCoureur);                                
+                                }
+                            catch (Exception e)
+                                {
+                                    System.out.println("Erreur Requete de chargement : " + e.getMessage());
+                                }
+                        }
+                }
+            catch (Exception e)
+                {
+                      System.out.println("Erreur Requete de chargement : " + e.getMessage());
+                }
+            return leClassementCoureurs;
+        }
+       static public void ecrireCSV()
+        {
+            String nomCourse;
+            Statement stmt1;
+            ResultSet rs1; 
+            String requete1 = "SELECT distinct nomCourse from courir";
+            String pilote1 = "org.gjt.mm.mysql.Driver";
+            String urle1 = new String("jdbc:mysql://localhost/projetjava");
+            try
+            {
+                Class.forName(pilote1);
+                Connection conn = DriverManager.getConnection(urle1,"root","");
+                stmt1 = conn.createStatement();
+                rs1 = stmt1.executeQuery(requete1);
+                while(rs1.next())
+                {
+                  Statement stmt2;
+                  ResultSet rs2; 
+                  String pilote2 = "org.gjt.mm.mysql.Driver";
+                  String urle2 = new String("jdbc:mysql://localhost/projetjava");
+                  nomCourse = rs1.getString("nomCourse");
+                  String nomFichier = "résultat"+nomCourse+".csv";
+                  System.out.println(nomFichier);
+                  FileWriter fileWriter = new FileWriter(nomFichier);
+                  fileWriter.close();
+                  String requete2 = "SELECT place,nomCoureur,prenomCoureur,temps FROM courir WHERE nomCourse = '"+nomCourse+"' order by place asc";
+                  try
+                    {
+                        Class.forName(pilote2);
+                        Connection conn2 = DriverManager.getConnection(urle2,"root","");
+                        stmt2 = conn2.createStatement();
+                        rs2 = stmt2.executeQuery(requete2);
+                        PrintStream l_out = new PrintStream(new FileOutputStream(nomFichier));
+                        while(rs2.next())
+                        {      
+                            
+                            l_out.println("place : " +rs2.getInt("place") + " | nom : " + rs2.getString("nomCoureur") + " | prenom : " + rs2.getString("prenomCoureur") + " | temps : " + rs2.getTime("temps")  );
+                            
+                        }
+                        l_out.flush(); 
+			l_out.close(); 
+                    }
+                  catch (Exception e)
+                    {
+                        System.out.println("Erreur Requete de chargement : " + e.getMessage());
+                    }
+                  
+                }
+            }
+            
+            catch (Exception e)
+            {
+                System.out.println("Erreur Requete de chargement : " + e.getMessage());
+            }
+                
+            
+        }        
 }

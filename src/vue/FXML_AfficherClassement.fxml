@@ -11,11 +11,10 @@
    <children>
       <TableView fx:id="tableCourse" layoutX="36.0" layoutY="203.0" prefHeight="301.0" prefWidth="726.0">
         <columns>
-          <TableColumn fx:id="colCourseClub" prefWidth="141.0" text="Nom du club" />
-          <TableColumn fx:id="colCourseNom" prefWidth="181.0" text="nom du coureur" />
-            <TableColumn fx:id="colCoursePrenom" prefWidth="179.0" text="prénom du coureur" />
+          <TableColumn fx:id="colCourseNom" prefWidth="252.0" text="nom du coureur" />
+            <TableColumn fx:id="colCoursePrenom" prefWidth="213.0" text="prénom du coureur" />
             <TableColumn fx:id="colCoursePlace" prefWidth="107.0" text="place" />
-            <TableColumn fx:id="colCourseTemps" prefWidth="117.0" text="temps" />
+            <TableColumn fx:id="colCourseTemps" prefWidth="153.0" text="temps" />
         </columns>
       </TableView>
       <RadioButton fx:id="radioCourse" layoutX="85.0" layoutY="113.0" mnemonicParsing="false" onAction="#handleCourse" text="Affichage par course" />
@@ -28,10 +27,9 @@
       </Label>
       <TableView fx:id="tableChallenge" layoutX="36.0" layoutY="203.0" prefHeight="301.0" prefWidth="726.0">
         <columns>
-          <TableColumn fx:id="colChallengeClub" prefWidth="173.0" text="nom du club" />
-          <TableColumn fx:id="colChallengeNomCoureur" prefWidth="188.0" text="nom du coureur" />
-            <TableColumn fx:id="colChallengePrenomCoureur" prefWidth="206.0" text="prénom du coureur" />
-            <TableColumn fx:id="colChallengePoints" prefWidth="158.0" text="points" />
+          <TableColumn fx:id="colChallengeNomCoureur" prefWidth="286.0" text="nom du coureur" />
+            <TableColumn fx:id="colChallengePrenomCoureur" prefWidth="258.0" text="prénom du coureur" />
+            <TableColumn fx:id="colChallengePoints" prefWidth="181.0" text="points" />
         </columns>
       </TableView>
    </children>

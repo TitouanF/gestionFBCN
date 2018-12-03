@@ -3,20 +3,14 @@ package Modele;
 
 public class ClassementChallengeCoureurs 
 {
-    private String nomClub;
     private String nom;
     private String prenom;
     private int point;
-    public ClassementChallengeCoureurs(String nouvNomClub,String nouvNom,String nouvPrenom,int nouvPoint)
+    public ClassementChallengeCoureurs(String nouvNom,String nouvPrenom, int nouvPoints)
     {
-        nomClub = nouvNomClub;
         nom = nouvNom;
         prenom = nouvPrenom;
-        point = nouvPoint;
-    }
-    public String getNomClub()
-    {
-        return nomClub;
+        point = nouvPoints;
     }
     public String getNom()
     {
@@ -25,6 +19,10 @@ public class ClassementChallengeCoureurs
     public String getPrenom()
     {
         return prenom;
+    }
+    public void setPoint(int nouvPoint)
+    {
+        point = point +  nouvPoint;
     }
     public int getPoint()
     {

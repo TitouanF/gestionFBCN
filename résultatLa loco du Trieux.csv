@@ -1,0 +1,145 @@
+place : 1 | nom : THOMAS | prenom : YVES | temps : 02:16:55
+place : 2 | nom : LAPORTE | prenom : VIVIEN | temps : 02:21:05
+place : 3 | nom : HERISSON | prenom : FRANCOIS | temps : 02:21:29
+place : 4 | nom : DIAS | prenom : CARLOS | temps : 02:28:35
+place : 5 | nom : CONNAN  | prenom : JEAN MARC | temps : 02:32:31
+place : 6 | nom : KERLOUET | prenom : DIDIER | temps : 02:32:34
+place : 7 | nom : TOUDIC | prenom : GILBERT | temps : 02:32:38
+place : 8 | nom : CORNANGUER | prenom : YANNICK | temps : 02:33:51
+place : 9 | nom : LE DU | prenom : YANN | temps : 02:36:17
+place : 10 | nom : LE MERDY | prenom : YANN | temps : 02:36:18
+place : 11 | nom : SCOLAN | prenom : SYLVAIN | temps : 02:36:19
+place : 12 | nom : GODARD | prenom : BENOIT | temps : 02:37:50
+place : 13 | nom : ALLAIRE | prenom : PIERRE | temps : 02:39:40
+place : 14 | nom : COLAS | prenom : CHRISTIAN | temps : 02:39:50
+place : 15 | nom : GILBERT | prenom : FRANCK | temps : 02:41:51
+place : 16 | nom : EMMANUEL | prenom : PHILIPPE | temps : 02:42:12
+place : 17 | nom : LE MEUR | prenom : THOMAS | temps : 02:42:26
+place : 18 | nom : JEGOU | prenom : VINCENT | temps : 02:42:50
+place : 19 | nom : DESVIGNE | prenom : KEVIN | temps : 02:43:58
+place : 20 | nom : LE GALL | prenom : JEAN LUC | temps : 02:43:59
+place : 21 | nom : BATISTA | prenom : VIVIEN | temps : 02:44:00
+place : 22 | nom : ETIEMBLE | prenom : BRUNO | temps : 02:47:28
+place : 23 | nom : LOZAHIC | prenom : YVON | temps : 02:49:36
+place : 24 | nom : KERGUS | prenom : GUY | temps : 02:50:24
+place : 25 | nom : MAROS | prenom : BRUNO | temps : 02:51:34
+place : 26 | nom : BALLI | prenom : FRANCIS | temps : 02:53:59
+place : 27 | nom : LE MEUR | prenom : BERNARD | temps : 02:54:00
+place : 28 | nom : Richtofen | prenom : Edward | temps : 02:54:24
+place : 29 | nom : COJEAN | prenom : SAMUEL | temps : 02:55:02
+place : 30 | nom : LE BRAS | prenom : PATRICE | temps : 02:55:23
+place : 31 | nom : LE GAC | prenom : YANNICK | temps : 02:55:36
+place : 32 | nom : CHARPENTIER | prenom : GAEL | temps : 02:56:10
+place : 33 | nom : GUEGUEN | prenom : MICKAEL | temps : 02:56:14
+place : 34 | nom : LE BOUILL | prenom : DENIS | temps : 02:56:15
+place : 35 | nom : KERRAIN | prenom : BRUNO | temps : 02:56:34
+place : 36 | nom : CLAITE  | prenom : EMMANUEL | temps : 02:56:34
+place : 37 | nom : OLLIVO | prenom : BERNARD | temps : 02:57:23
+place : 38 | nom : BESCONT | prenom : OLIVIER | temps : 02:59:04
+place : 39 | nom : BARBIER | prenom : MICKAEL | temps : 02:59:04
+place : 40 | nom : LE SAUX | prenom : PHILIPPE | temps : 02:59:20
+place : 41 | nom : ROPERS | prenom : CLAUDE | temps : 02:59:33
+place : 42 | nom : MEUDIC | prenom : STEPHANE | temps : 03:00:44
+place : 43 | nom : PIERRE | prenom : BRUNO | temps : 03:02:38
+place : 44 | nom : BASLE | prenom : PASCAL | temps : 03:03:26
+place : 45 | nom : DAOULAS | prenom : MICHEL | temps : 03:03:30
+place : 46 | nom : GUILLOU | prenom : GREGORY | temps : 03:04:07
+place : 47 | nom : COUDRAY | prenom : DAVID | temps : 03:04:07
+place : 48 | nom : MILLET | prenom : STEPHANE | temps : 03:04:15
+place : 49 | nom : MORVAN | prenom : RONAN | temps : 03:04:40
+place : 50 | nom : LE GALL | prenom : XAVIER | temps : 03:04:44
+place : 51 | nom : LE BOUETTE | prenom : PAUL | temps : 03:05:10
+place : 52 | nom : MAROS | prenom : DOMINIQUE | temps : 03:06:02
+place : 53 | nom : DERRIEN | prenom : YANNICK | temps : 03:07:07
+place : 54 | nom : TOULLELAN | prenom : VINCENT | temps : 03:08:01
+place : 55 | nom : NICOLAS | prenom : BRUNO | temps : 03:08:27
+place : 56 | nom : SAVIGNY | prenom : DAVE | temps : 03:12:12
+place : 57 | nom : BRIENT | prenom : JEAN JACQUES | temps : 03:12:12
+place : 58 | nom : CLAIR | prenom : JEAN PIERRE | temps : 03:13:32
+place : 59 | nom : LE BOUDER | prenom : GILDAS | temps : 03:14:10
+place : 60 | nom : TONON | prenom : THIERRY | temps : 03:14:14
+place : 61 | nom : SALOU | prenom : PHILIPPE | temps : 03:14:17
+place : 62 | nom : COURTOIS | prenom : PIERRE | temps : 03:14:20
+place : 63 | nom : VIOT | prenom : BRUNO | temps : 03:14:44
+place : 64 | nom : CAMPION | prenom : PASCAL | temps : 03:15:00
+place : 65 | nom : LE BOURVA | prenom : DIDIER | temps : 03:15:00
+place : 66 | nom : HARDUIN  | prenom : RAFAEL | temps : 03:15:32
+place : 67 | nom : BADIER | prenom : CHRISTOPHE | temps : 03:16:49
+place : 68 | nom : LE SAINT | prenom : BRUNO | temps : 03:18:29
+place : 69 | nom : GEFFROY | prenom : STEPHANE | temps : 03:19:02
+place : 70 | nom : ABJEAN | prenom : ALAIN | temps : 03:19:17
+place : 71 | nom : RICHARD  | prenom : YANNICK | temps : 03:19:50
+place : 72 | nom : BOSCHER | prenom : HERVE | temps : 03:19:50
+place : 73 | nom : RAOUL | prenom : CHRISTIAN | temps : 03:19:54
+place : 74 | nom : FRAVAL | prenom : MARC | temps : 03:20:04
+place : 75 | nom : BRÉBANT | prenom : OLIVIER | temps : 03:20:05
+place : 76 | nom : LE BRIS | prenom : SERVANE | temps : 03:20:36
+place : 77 | nom : GUILLOU | prenom : QUENTIN | temps : 03:21:33
+place : 78 | nom : GUILLOU | prenom : BASTIEN | temps : 03:21:33
+place : 79 | nom : GUILLOU | prenom : JEAN JACQUES | temps : 03:21:33
+place : 80 | nom : SELLIER | prenom : GILLES | temps : 03:22:40
+place : 81 | nom : PRIGENT | prenom : JEAN YVES | temps : 03:23:54
+place : 82 | nom : LAMOULER | prenom : RONAN | temps : 03:25:00
+place : 83 | nom : GUYOMAR | prenom : DAVID | temps : 03:25:15
+place : 84 | nom : LE SCORNET | prenom : YVON | temps : 03:25:30
+place : 85 | nom : MEHAT | prenom : STEPHANE | temps : 03:25:30
+place : 86 | nom : LE GUILLOU | prenom : GILLES | temps : 03:26:53
+place : 87 | nom : HERVE | prenom : JEAN MARC | temps : 03:26:53
+place : 88 | nom : POULOUIN | prenom : ERWAN | temps : 03:27:22
+place : 89 | nom : DAVEAU | prenom : DAVID | temps : 03:27:30
+place : 90 | nom : PICHARD | prenom : JEAN CLAUDE | temps : 03:28:20
+place : 91 | nom : PICHARD | prenom : GILLES | temps : 03:30:00
+place : 92 | nom : SAVIGNY | prenom : CHRISTIAN | temps : 03:31:00
+place : 93 | nom : NICOLAS | prenom : JACQUES | temps : 03:31:05
+place : 94 | nom : JOURAND | prenom : PHILIPPE | temps : 03:31:10
+place : 95 | nom : HUERTEL | prenom : PHILIPPE | temps : 03:31:15
+place : 96 | nom : DERRIEN | prenom : BERNARD | temps : 03:32:39
+place : 97 | nom : GAYIC | prenom : JOEL | temps : 03:32:58
+place : 98 | nom : AUFFRET | prenom : GAETAN | temps : 03:35:06
+place : 99 | nom : QUÉANT | prenom : GWEN | temps : 03:35:39
+place : 100 | nom : LORINQUER | prenom : JEAN YVES | temps : 03:35:56
+place : 101 | nom : OBERT | prenom : RALPH | temps : 03:36:40
+place : 102 | nom : COADIC | prenom : BRUNO | temps : 03:37:07
+place : 103 | nom : LE LOARER | prenom : JEAN YVES | temps : 03:38:12
+place : 104 | nom : BOUTIER | prenom : JEAN LUC | temps : 03:39:45
+place : 105 | nom : Belinski | prenom : Nikolai | temps : 03:40:30
+place : 106 | nom : DOSSER | prenom : DAVID | temps : 03:40:30
+place : 107 | nom : FLAGEUL | prenom : CHRISTOPHE | temps : 03:40:35
+place : 108 | nom : LE GOFF | prenom : JEAN PIERRE | temps : 03:40:50
+place : 109 | nom : GELGON | prenom : PHILIPPE | temps : 03:42:29
+place : 110 | nom : GELIN | prenom : CHRISTIAN | temps : 03:42:29
+place : 111 | nom : ESTORGES | prenom : FRANCK | temps : 03:43:25
+place : 112 | nom : SADOU | prenom : MICKAEL | temps : 03:43:40
+place : 113 | nom : FRALEUX | prenom : JEAN CLAUDE | temps : 03:43:50
+place : 114 | nom : GARNIER | prenom : FREDERIC | temps : 03:44:00
+place : 115 | nom : ZALUSKI | prenom : FRANCIS | temps : 03:44:46
+place : 116 | nom : LE CHEVANTON | prenom : GILBERT | temps : 03:45:00
+place : 117 | nom : PAGE | prenom : PHILIPPE | temps : 03:50:00
+place : 118 | nom : JACOPIN | prenom : CHRISTOPHE | temps : 03:51:00
+place : 119 | nom : BORGES | prenom : LOIC | temps : 03:51:29
+place : 120 | nom : HUSSET | prenom : BERTRAND | temps : 03:52:15
+place : 121 | nom : TRONEL | prenom : NICOLAS | temps : 03:57:30
+place : 122 | nom : GUEVEL | prenom : JEAN YVON | temps : 03:58:52
+place : 123 | nom : DUPUIS | prenom : CYRIL | temps : 04:00:00
+place : 124 | nom : PETITJEAN | prenom : PHILIPPE | temps : 04:05:00
+place : 125 | nom : ROUAULT | prenom : LUC | temps : 04:09:55
+place : 126 | nom : POUSSEREAU | prenom : MARTIAL | temps : 04:11:14
+place : 127 | nom : LAVENANT | prenom : HERVE | temps : 04:19:00
+place : 128 | nom : KEREMPICHON | prenom : JEAN CLAUDE | temps : 00:00:00
+place : 129 | nom : DAVID | prenom : JEAN RENE | temps : 00:00:00
+place : 130 | nom : MERRIEN | prenom : YANNICK  | temps : 00:00:00
+place : 131 | nom : FEGER | prenom : CHRISTIAN | temps : 00:00:00
+place : 132 | nom : GRAINDORGE | prenom : DAVID | temps : 00:00:00
+place : 133 | nom : NAOUR | prenom : FABRICE | temps : 00:00:00
+place : 135 | nom : ROUSSIN | prenom : YANNICK | temps : 00:00:00
+place : 136 | nom : LEFEUVRE | prenom : SEBASTIEN | temps : 00:00:00
+place : 137 | nom : SIMON | prenom : MATHIEU | temps : 00:00:00
+place : 138 | nom : CORRE | prenom : ERIC | temps : 00:00:00
+place : 139 | nom : LE QUÉRÉ | prenom : GERARD | temps : 00:00:00
+place : 140 | nom : NICOLAS | prenom : YVES | temps : 00:00:00
+place : 141 | nom : NICOLAS | prenom : DANIEL | temps : 00:00:00
+place : 142 | nom : COTTIN | prenom : ALAIN | temps : 00:00:00
+place : 143 | nom : THOMAS | prenom : MICHEL | temps : 00:00:00
+place : 144 | nom : LE CARRER | prenom : FRANCK | temps : 00:00:00
+place : 145 | nom : GUYOMARD | prenom : ANDRE | temps : 00:00:00
+place : 146 | nom : LE BRIS | prenom : ERWAN | temps : 00:00:00

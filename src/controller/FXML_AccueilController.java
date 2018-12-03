@@ -128,6 +128,12 @@ public class FXML_AccueilController implements Initializable
 
           System.out.println("ERREUR chargement boite dialogue:" + ioe.getMessage());
 
-        }  
+        } 
+  }
+  
+  @FXML
+  private void handleEcrire()
+  {
+      GestionRequetes.ecrireCSV();
   }
 }
