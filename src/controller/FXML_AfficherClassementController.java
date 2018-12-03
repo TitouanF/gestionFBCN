@@ -94,7 +94,7 @@ public class FXML_AfficherClassementController implements Initializable
     public void handleChallenge()
         {
             comboBoxChoixCourse.valueProperty().removeListener(changeListener1);
-            tableCourse.getItems().clear();
+            leClassementCoureurs.clear();
             tableChallenge.getItems().clear();
             radioCourse.setSelected(false);
             tableCourse.setVisible(false);
