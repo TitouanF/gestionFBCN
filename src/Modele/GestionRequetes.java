@@ -30,6 +30,8 @@ public class GestionRequetes
     static ObservableList<Club> lesClubs = FXCollections.observableArrayList();
     static ObservableList<ClassementCourseCoureurs> lesCoursesCoureurs = FXCollections.observableArrayList();
     static ObservableList<ClassementChallengeCoureurs> leClassementCoureurs = FXCollections.observableArrayList();
+    static ObservableList<ClassementCoureur> lesCoursesCoureur = FXCollections.observableArrayList();
+    static ObservableList<CoureurIndividuel> lesCoureursClassement = FXCollections.observableArrayList();
         public static ObservableList<Club> listeClubs()
             {
                 Statement stmt;
@@ -406,8 +408,61 @@ public class GestionRequetes
             catch (Exception e)
             {
                 System.out.println("Erreur Requete de chargement : " + e.getMessage());
+            }          
+        }
+       
+        static public ObservableList<CoureurIndividuel> getCoureur()
+        {
+           Statement stmt;
+           ResultSet rs; 
+           CoureurIndividuel unCoureur;
+           String pilote = "org.gjt.mm.mysql.Driver";
+           String urle = new String("jdbc:mysql://localhost/projetjava");
+           String requete = "select distinct prenomCoureur,nomCoureur from courir";
+           try
+            {
+                Class.forName(pilote);
+                Connection conn = DriverManager.getConnection(urle,"root","");
+                stmt = conn.createStatement();
+                rs = stmt.executeQuery(requete);
+                while(rs.next())
+                {
+                 unCoureur = new CoureurIndividuel(rs.getString("prenomCoureur"),rs.getString("nomCoureur"));
+                 lesCoureursClassement.add(unCoureur);
+                }
             }
-                
-            
-        }        
+           catch (Exception e)
+                    {
+                        System.out.println("Erreur Requete de chargement : " + e.getMessage());
+                    }
+            return lesCoureursClassement;
+        }
+        
+        static public ObservableList<ClassementCoureur> getCourseCoureur(String nomCoureur)
+        {
+           Statement stmt;
+           ResultSet rs; 
+           ClassementCoureur uneCourse;
+           String pilote = "org.gjt.mm.mysql.Driver";
+           String urle = new String("jdbc:mysql://localhost/projetjava");
+           String requete = "select * from courir where nomCoureur='"+nomCoureur+"' order by place asc";
+           System.out.println(requete);
+           try
+            {
+                Class.forName(pilote);
+                Connection conn = DriverManager.getConnection(urle,"root","");
+                stmt = conn.createStatement();
+                rs = stmt.executeQuery(requete);
+                while(rs.next())
+                {
+                 uneCourse = new ClassementCoureur(rs.getString("nomCourse"),rs.getString("prenomCoureur"),rs.getString("nomCoureur"),rs.getInt("place"),rs.getTime("temps"));
+                 lesCoursesCoureur.add(uneCourse);
+                }
+            }
+           catch (Exception e)
+                    {
+                        System.out.println("Erreur Requete de chargement : " + e.getMessage());
+                    }
+           return lesCoursesCoureur;
+        }
 }

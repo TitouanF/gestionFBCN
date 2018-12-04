@@ -32,5 +32,16 @@
             <TableColumn fx:id="colChallengePoints" prefWidth="181.0" text="points" />
         </columns>
       </TableView>
+      <RadioButton fx:id="radioCoureur" layoutX="360.0" layoutY="113.0" mnemonicParsing="false" onAction="#handleCoureur" text="Coureur" />
+      <ComboBox fx:id="comboBoxChoixCoureur" layoutX="326.0" layoutY="154.0" prefWidth="150.0" />
+      <TableView fx:id="tableCoureur" layoutX="36.0" layoutY="203.0" prefHeight="301.0" prefWidth="726.0">
+        <columns>
+          <TableColumn fx:id="colCoureurCourse" prefWidth="142.0" text="course" />
+          <TableColumn fx:id="colCoureurPrenom" prefWidth="153.0" text="prenom du coureur" />
+            <TableColumn fx:id="colCoureurNom" prefWidth="152.0" text="nom du coureur" />
+            <TableColumn fx:id="colCoureurPlace" prefWidth="137.0" text="place" />
+            <TableColumn fx:id="colCoureurTemps" prefWidth="141.0" text="temps" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
