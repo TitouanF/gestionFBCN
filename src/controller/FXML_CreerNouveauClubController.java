@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 
@@ -22,11 +23,28 @@ public class FXML_CreerNouveauClubController implements Initializable
     TextField textVille;
     @FXML
     TextField textNomPresident;
+    @FXML
+    Label labelErreurNom;
+    @FXML
+    Label labelErreurAdresse;
+    @FXML
+    Label labelErreurCodePostal;
+    @FXML
+    Label labelErreurVille;
+    @FXML
+    Label labelErreurPresident;
+    @FXML
+    Label labelAjoutFini;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) 
     {
-        
+        labelErreurNom.setVisible(false);
+        labelErreurAdresse.setVisible(false);
+        labelErreurCodePostal.setVisible(false);
+        labelErreurVille.setVisible(false);
+        labelErreurPresident.setVisible(false);
+        labelAjoutFini.setVisible(false);
     }   
     @FXML
     public void handleAjoutClub()
@@ -35,26 +53,52 @@ public class FXML_CreerNouveauClubController implements Initializable
         
         if(textNom.getText() == null || textNom.getText().length() == 0 || estUnString(textNom.getText()))
             {
+                labelAjoutFini.setVisible(false);
                 System.out.println("Entrez un nom valide");
+                labelErreurNom.setVisible(true);
             }
         else if (textAdresse.getText() == null || textAdresse.getText().length() == 0)
             {
+                labelAjoutFini.setVisible(false);
+                labelErreurNom.setVisible(false);
                 System.out.println("Entrez une adresse valide");
+                labelErreurAdresse.setVisible(true);
             }
         else if (textCP.getText() == null || textCP.getText().length() != 5 || estUnEntier(textCP.getText()))
             {
-                System.out.println("Entrez un code postal valide");    
+                labelAjoutFini.setVisible(false);
+                labelErreurAdresse.setVisible(false);
+                labelErreurNom.setVisible(false);
+                System.out.println("Entrez un code postal valide");
+                labelErreurCodePostal.setVisible(true);
             }
         else if (textVille.getText() == null || textVille.getText().length() == 0 || estUnString(textVille.getText()))
             {
+                labelAjoutFini.setVisible(false);
+                labelErreurAdresse.setVisible(false);
+                labelErreurNom.setVisible(false);
+                labelErreurCodePostal.setVisible(false);
                 System.out.println("Entrez une ville valdie");
+                labelErreurVille.setVisible(true);
             }
         else if (textNomPresident.getText() == null || textNomPresident.getText().length() == 0 || estUnString(textNomPresident.getText()))
             {
+                labelAjoutFini.setVisible(false);
+                labelErreurAdresse.setVisible(false);
+                labelErreurNom.setVisible(false);
+                labelErreurCodePostal.setVisible(false);
+                labelErreurVille.setVisible(false);
                 System.out.println("Entrez un nom de président valide");
+                labelErreurPresident.setVisible(true);
             }
         else
             {
+                labelAjoutFini.setVisible(true);
+                labelErreurAdresse.setVisible(false);
+                labelErreurNom.setVisible(false);
+                labelErreurCodePostal.setVisible(false);
+                labelErreurVille.setVisible(false);
+                labelErreurPresident.setVisible(false);
                 nom = textNom.getText();
                 adresse = textAdresse.getText();
                 CP = textCP.getText();

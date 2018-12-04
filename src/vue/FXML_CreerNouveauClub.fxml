@@ -7,10 +7,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="419.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.FXML_CreerNouveauClubController">
+<AnchorPane id="AnchorPane" prefHeight="419.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXML_CreerNouveauClubController">
    <children>
-      <GridPane layoutX="113.0" layoutY="136.0" prefHeight="197.0" prefWidth="388.0">
+      <GridPane layoutX="176.0" layoutY="126.0" prefHeight="197.0" prefWidth="388.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -35,11 +34,37 @@
             <TextField fx:id="textNomPresident" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <Label layoutX="229.0" layoutY="56.0" text="Ajout du club" textFill="#ff0505">
+      <Label layoutX="343.0" layoutY="61.0" text="Ajout du club" textFill="#ff0505">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="bouttonAjout" layoutX="435.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleAjoutClub" prefHeight="31.0" prefWidth="66.0" text="Ajout" />
+      <Button fx:id="bouttonAjout" layoutX="498.0" layoutY="341.0" mnemonicParsing="false" onAction="#handleAjoutClub" prefHeight="31.0" prefWidth="66.0" text="Ajout" />
+      <Label fx:id="labelErreurNom" layoutX="578.0" layoutY="135.0" text="Veuillez écrire un nom valide" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelErreurVille" layoutX="576.0" layoutY="252.0" text="Veuillez écrire une ville valide" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelErreurPresident" layoutX="576.0" layoutY="293.0" text="Veuillez écrire un nom valide" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelErreurAdresse" layoutX="576.0" layoutY="176.0" text="Veuillez écrire une adresse valide" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelErreurCodePostal" layoutX="576.0" layoutY="214.0" prefHeight="21.0" prefWidth="253.0" text="Veuillez écrire un code postal valide" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAjoutFini" layoutX="578.0" layoutY="346.0" text="Ajout effectué :)" textFill="#2ba141" />
    </children>
 </AnchorPane>

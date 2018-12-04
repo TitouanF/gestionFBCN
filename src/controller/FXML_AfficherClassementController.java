@@ -138,7 +138,6 @@ public class FXML_AfficherClassementController implements Initializable
             lesCourses = GestionRequetes.listeCourse();
             comboBoxChoixCourse.setItems(lesCourses);
             comboBoxChoixCourse.valueProperty().addListener(changeListener1);
-
             comboBoxChoixCoureur.setVisible(false);
             tableCoureur.setVisible(false);
         }
